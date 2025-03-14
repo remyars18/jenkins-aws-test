@@ -6,14 +6,14 @@ spec:
   replicas: 2
   selector: 
     matchLabels:
-      name: canary
+      name: my-app
   template:
     metadata:
       labels:
-        name: canary
+        name: my-app
     spec:
       containers:
-      - name: mercedes
+      - name: car
         image: remyars/car-image:latest
         ports:
         - containerPort: 80
